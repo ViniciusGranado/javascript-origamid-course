@@ -1,0 +1,14 @@
+body, h1, h2, h3, ul, li, p, dd, dt, ul {
+  margin: 0;
+  padding: 0;
+
+}
+
+img {
+  display: block;
+  max-width: 100%;  
+}
+
+ul, li{
+  list-style: none;
+}
