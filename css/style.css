@@ -49,7 +49,6 @@ body {
   margin-bottom: 4rem ;
 }
 
-/* ANIMAIS */
 .titulo {
   font-family: 'Playfair Display SC', georgia;
   font-size: 6rem;
@@ -58,6 +57,8 @@ body {
   line-height: 1;
   margin-bottom: 1rem;
 }
+
+/* ANIMAIS */
 
 .animais h2 {
   color: #E54;
@@ -106,3 +107,32 @@ body {
 .animais-descricao section {
   margin-bottom: 3rem;
 }
+
+/* FAQ */
+.faq-lista {
+  grid-column: 2 / 4;
+}
+
+.faq-lista dt {
+  color: #E54;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  margin-bottom: .5rem;
+  margin-top: 2rem;
+}
+
+.faq-lista dt::before {
+  background-color: #FB5;
+  content: '';
+  display: inline-block;
+  height: 10px;
+  margin-right: 10px;
+  width: 20px;
+}
+
+.faq-lista dd {
+  font-family: Helvetica, Arial;
+  margin-bottom: .5rem;
+  margin-left: 30px;
+}
+
