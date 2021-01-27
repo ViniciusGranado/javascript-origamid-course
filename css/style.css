@@ -99,6 +99,9 @@ body {
 .animais-lista::-webkit-scrollbar-track {
   background-color: #FAF6ED;
 }
+.animais-lista li {
+  cursor: pointer;
+}
 
 .animais-descricao {
   grid-column: 3;
