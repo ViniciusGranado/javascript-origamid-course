@@ -4,8 +4,8 @@
 }
 
 .js-tabcontent section.active {
-  display: block;
   animation: show 0.5s forwards;
+  display: block;
 }
 
 @keyframes show {
@@ -16,5 +16,38 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+
+/* ACCORDION */
+.js .js-accordion dt {
+  cursor: pointer;
+}
+.js-accordion dt::after {
+  content: '↴';
+  display: inline-block;
+  margin-left: 10px;
+  transition: transform 0.3s linear;
+}
+.js-accordion dt.active::after {
+  transform: rotate(180deg);
+}
+
+.js .js-accordion dd {
+  display: none;
+}
+.js-accordion dd.active {
+  animation: slideDown 0.5s forwards;
+  display: block;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
