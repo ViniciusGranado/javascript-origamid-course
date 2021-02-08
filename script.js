@@ -41,5 +41,25 @@ const initAccordion = () => {
   }
 }
 
+const initSmoothScroll = () => {
+  function scrollToSection (event) {
+    event.preventDefault();
+  
+    const href = event.currentTarget.getAttribute('href');
+  
+    const section = document.querySelector(href);
+    
+    section.scrollIntoView({
+      behavior: 'smooth',
+    });
+  }
+  
+  const internalLinks = document.querySelectorAll('.menu a[href^="#"]');
+  internalLinks.forEach((item) => {
+    item.addEventListener('click', scrollToSection);
+  })
+}
+
 initTabNav();
 initAccordion();
+initSmoothScroll();
