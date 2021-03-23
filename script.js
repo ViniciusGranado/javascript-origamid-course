@@ -60,6 +60,30 @@ const initSmoothScroll = () => {
   })
 }
 
+const initScrollAnimation = () => {
+  const sections = document.querySelectorAll('.js-scroll');
+  
+  if (sections.length) {
+    const windowHeightToAnimation = window.innerHeight * 0.7;
+
+    const animateScroll = () => {
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const isSectionVisible = (sectionTop - windowHeightToAnimation) < 0;
+    
+        if (isSectionVisible) {
+          section.classList.add('active');
+        }
+      })
+    }
+    
+    animateScroll();
+    window.addEventListener('scroll', animateScroll);
+  }
+}
+
+
 initTabNav();
 initAccordion();
 initSmoothScroll();
+initScrollAnimation();
